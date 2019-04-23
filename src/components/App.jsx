@@ -1,6 +1,7 @@
 import React from "react";
-import MarketSchedule from "./MarketSchedule";
-import AvailableProduce from "./AvailableProduce";
+import Home from "./Home";
+import About from "./About";
+import { Switch, Route } from 'react-router-dom';
 
 function App(){
 
@@ -9,13 +10,12 @@ function App(){
   return (
     <div>
       <div>
-        <MarketSchedule/>
+        
       </div>
-
-      <div>
-        <AvailableProduce/>
-      </div>
-      
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route path='/about' component={About}/>
+      </Switch>
     </div>
   );
 }

@@ -276,7 +276,7 @@ function AvailableProduce(){
   
   return (
     <div>
-      <div className="pageTop">
+      <div>
          <style>{`
           h1 {
               text-align: center;
