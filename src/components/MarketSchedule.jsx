@@ -45,14 +45,33 @@ const marketInfo = [
 function MarketSchedule(){
 
   return (
-    <div>
-       {marketInfo.map((market, index) =>
-       <Market day={market.day}
-       location={market.location}
-       hours={market.hours}
-       booth={market.booth}
-       key={index}/>
-       )}
+     <div>
+      <div>
+         <style>{`
+            h1 {
+               text-align: center;
+            }
+         `}
+         </style>
+         <h1>Our Schedule</h1>
+      </div>
+      <div className="grid">
+         <style>{`
+            .grid {
+               display: grid;
+               grid-template-columns: 1fr 1fr 1fr;
+            }
+         `}</style>
+         {marketInfo.map((market, index) =>
+         <Market day={market.day}
+         location={market.location}
+         hours={market.hours}
+         booth={market.booth}
+         key={index}/>
+         )}
+         
+         
+      </div>
     </div>
   );
 }

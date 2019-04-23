@@ -8,8 +8,14 @@ function App(){
   
   return (
     <div>
-      <MarketSchedule/>
-      <AvailableProduce/>
+      <div>
+        <MarketSchedule/>
+      </div>
+
+      <div>
+        <AvailableProduce/>
+      </div>
+      
     </div>
   );
 }

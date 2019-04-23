@@ -276,15 +276,42 @@ function AvailableProduce(){
   
   return (
     <div>
-      
-      {availableProduce.map((produce, index) =>
-      <Produce month={produce.month } 
-               selection ={produce.selection.map((i) =>
-               <li>{i}</li> )}
-               key={index}/>
-      )}
-      
+      <div className="pageTop">
+         <style>{`
+          h1 {
+              text-align: center;
+          }
+        `}
+        </style>
+        <h1>What We Sell</h1>
+      </div>
+      <div className="grid">
+        <style>{`
+          .grid {
+            display: grid;
+            background-color: palegreen;
+            text-align: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 2%;
+            margin: 2%;
+            border: 0.5em dotted green;
+            border-radius: 3em;
+          }
+          #list-items {
+            list-style: none;
+
+          }
+        `}</style>
+        {availableProduce.map((produce, index) =>
+        <Produce month={produce.month } 
+                selection ={produce.selection.map((i) =>
+                <li id="list-items">{i}</li> )}
+                key={index}/>
+        )}
+        
+      </div>
     </div>
+    
   );
 }
 
